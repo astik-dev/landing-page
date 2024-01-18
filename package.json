@@ -1,0 +1,42 @@
+{
+  "name": "gulp-configuration",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "type": "module",
+  "scripts": {
+    "dev": "gulp",
+    "build:dev": "gulp --build",
+    "build:prod": "gulp deploy --build",
+    "zip": "gulp deployZip --build"
+  },
+  "keywords": [],
+  "author": "ASTIK",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "latest",
+    "del": "latest",
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-clean-css": "latest",
+    "gulp-file-include": "latest",
+    "gulp-group-css-media-queries": "latest",
+    "gulp-if": "latest",
+    "gulp-imagemin": "latest",
+    "gulp-newer": "latest",
+    "gulp-plumber": "latest",
+    "gulp-rename": "latest",
+    "gulp-sass": "latest",
+    "gulp-svg-sprite": "latest",
+    "gulp-version-number": "latest",
+    "gulp-webp": "latest",
+    "gulp-webp-html-nosvg": "latest",
+    "gulp-webpcss": "latest",
+    "gulp-zip": "latest",
+    "imagemin-pngquant": "latest",
+    "sass": "latest",
+    "webp-converter": "2.2.3",
+    "webpack": "latest",
+    "webpack-stream": "latest"
+  }
+}
