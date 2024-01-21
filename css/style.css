@@ -180,6 +180,10 @@ body {
   white-space: nowrap;
 }
 
+.header__auth-btn:hover {
+  background: #F5F7FA;
+}
+
 .header__auth-btn:active {
   background: #E8F5E9;
 }
@@ -299,6 +303,10 @@ body {
     background: #E8F5E9;
   }
 
+  .header__auth-btn_bg {
+    background: #4CAF4F;
+  }
+
   .header__burger {
     position: absolute;
     top: 12.5px;
@@ -357,11 +365,5 @@ body {
   .header__burger {
     top: 7.5px;
     right: 10px;
-  }
-}
-
-@media (hover: hover) {
-  .header__auth-btn:hover {
-    background: #F5F7FA;
   }
 }
