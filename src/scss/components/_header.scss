@@ -168,10 +168,8 @@
             line-height: 142.857%;
             white-space: nowrap;
 
-            @media (hover: hover) {
-                &:hover {
-                    background: colors.$neutral-2;
-                }
+            &:hover {
+                background: colors.$neutral-2;
             }
             &:active {
                 background: colors.$tint-1;
@@ -198,6 +196,10 @@
                 }
                 &:active {
                     background: colors.$shade-1;
+                }
+
+                @media (max-width: $md) {
+                    background: colors.$brand-primary;
                 }
             }
         }
