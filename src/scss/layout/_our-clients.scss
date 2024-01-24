@@ -1,0 +1,55 @@
+@use "abstracts/colors";
+@use "abstracts/breakpoints" as *;
+@use "abstracts/mixins" as *;
+
+
+
+.our-clients {
+    padding: 40px 0 35px 0;
+
+    background-color: colors.$default-white;
+
+    @media (max-width: $lg) {
+        padding: 35px 0 28px 0;
+    }
+    @media (max-width: $sm) {
+        padding: 30px 0 24px 0;
+    }
+
+
+    &__title,
+    &__subtitle {
+        text-align: center;
+    }
+
+    &__subtitle {
+        margin: 8px 0 41px 0;
+
+        @media (max-width: $lg) {
+            margin: 8px 0 35px 0;
+        }
+        @media (max-width: $sm) {
+            margin: 8px 0 30px 0;
+        }
+    }
+
+    &__items {
+        @include flex (flex, space-between);
+
+        @media (max-width: $xl) {
+            justify-content: space-around;
+        }
+        @media (max-width: $sm) {
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px calc((100% - (48px * 3)) / 3);
+        }
+    }
+
+    &__item {
+        width: 48px;
+        height: 48px;
+
+        object-fit: contain;
+    }
+}
