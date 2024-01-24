@@ -1,3 +1,38 @@
+@use "abstracts/colors";
+@use "abstracts/breakpoints" as *;
+
+
+
 body {
     font-family: 'Inter', sans-serif;
+}
+
+
+h1 {
+    font-size: 64px;
+    line-height: 118.75%;
+
+    @media (max-width: $xl) {
+        font-size: 56px;
+    }
+    @media (max-width: $lg) {
+        font-size: 45px;
+    }
+    @media (max-width: $md) {
+        font-size: 38px;
+    }
+    @media (max-width: $sm) {
+        font-size: 32px;
+    }
+}
+
+
+.title {
+    font-weight: 600;
+    color: colors.$neutral-1;
+}
+.subtitle {
+    font-size: 16px;
+    line-height: 150%;
+    color: colors.$neutral-3;
 }

@@ -1,0 +1,26 @@
+@use "abstracts/breakpoints" as *;
+
+.container {
+    max-width: calc(1152px + (2 * 40px)); // width + padding (left+right)
+
+    $padding: 40px;
+    padding-left: $padding;
+    padding-right: $padding;
+    margin: 0 auto;
+
+    @media (max-width: $lg) {
+        $padding: 30px;
+        padding-left: $padding;
+        padding-right: $padding;
+    }
+    @media (max-width: $md) {
+        $padding: 25px;
+        padding-left: $padding;
+        padding-right: $padding;
+    }
+    @media (max-width: $sm) {
+        $padding: 15px;
+        padding-left: $padding;
+        padding-right: $padding;
+    }
+}

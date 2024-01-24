@@ -1,0 +1,32 @@
+@use "abstracts/colors";
+@use "abstracts/transitions";
+@use "abstracts/breakpoints" as *;
+@use "abstracts/mixins" as *;
+
+
+
+.btn {
+    @include flex (inline-flex, center, center);
+
+    padding: 14px 32px;
+
+    background: colors.$brand-primary;
+    border-radius: 4px;
+    
+    transition: transitions.$btn;
+
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: 500;
+    color: colors.$default-white;
+    white-space: nowrap;
+    text-align: center;
+
+    &:active {
+        background: colors.$shade-1;
+    }
+
+    @media (max-width: $md) {
+        padding: 12px 26px;
+    }
+}

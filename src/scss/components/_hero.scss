@@ -1,0 +1,80 @@
+@use "abstracts/colors";
+@use "abstracts/transitions";
+@use "abstracts/breakpoints" as *;
+@use "abstracts/mixins" as *;
+
+
+
+.hero {
+    background: colors.$neutral-2;
+
+    padding: 96px 0;
+
+    @media (max-width: $xl) {
+        padding: 80px 0;
+    }
+    @media (max-width: $lg) {
+        padding: 64px 0;
+    }
+    @media (max-width: $md) {
+        padding: 48px 0;
+    }
+    @media (max-width: $sm) {
+        padding: 60px 0 50px 0;
+    }
+
+
+    &__container {
+        @include flex (flex, space-between, center, 20px);
+        
+        @media (max-width: $sm) {
+            flex-direction: column-reverse;
+            gap: 40px;
+        }
+    }
+
+    &__content {
+        flex-shrink: 0;
+
+        width: 61%;
+
+        @media (max-width: $sm) {
+            flex-shrink: 1;
+
+            width: 100%;
+
+            text-align: center;
+        }
+    }
+
+    &__title {
+
+        span {
+            color: colors.$brand-primary;
+        }
+    }
+
+    &__subtitle {
+        margin: 16px 0 32px 0;
+    }
+
+    &__btn {
+
+    }
+
+    &__image {
+        flex-shrink: 1;
+
+        max-width: 391px;
+        width: 100%;
+
+        @media (max-width: $sm) {
+            max-width: 230px;
+        }
+
+
+        img {
+            width: 100%;
+        }
+    }
+}
