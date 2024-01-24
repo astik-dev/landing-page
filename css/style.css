@@ -95,6 +95,11 @@ h1 {
   line-height: 118.75%;
 }
 
+h2 {
+  font-size: 36px;
+  line-height: 122.222%;
+}
+
 .title {
   font-weight: 600;
   color: #4D4D4D;
@@ -302,6 +307,36 @@ h1 {
   width: 100%;
 }
 
+.our-clients {
+  padding: 40px 0 35px 0;
+  background-color: #FFF;
+}
+
+.our-clients__title,
+.our-clients__subtitle {
+  text-align: center;
+}
+
+.our-clients__subtitle {
+  margin: 8px 0 41px 0;
+}
+
+.our-clients__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.our-clients__item {
+  width: 48px;
+  height: 48px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 @media (max-width: 1199.5px) {
   h1 {
     font-size: 56px;
@@ -314,11 +349,20 @@ h1 {
   .hero {
     padding: 80px 0;
   }
+
+  .our-clients__items {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
 }
 
 @media (max-width: 991.5px) {
   h1 {
     font-size: 45px;
+  }
+
+  h2 {
+    font-size: 32px;
   }
 
   .container {
@@ -345,6 +389,14 @@ h1 {
 
   .hero {
     padding: 64px 0;
+  }
+
+  .our-clients {
+    padding: 35px 0 28px 0;
+  }
+
+  .our-clients__subtitle {
+    margin: 8px 0 35px 0;
   }
 }
 
@@ -484,6 +536,10 @@ h1 {
     font-size: 32px;
   }
 
+  h2 {
+    font-size: 27px;
+  }
+
   .container {
     padding-left: 15px;
     padding-right: 15px;
@@ -528,5 +584,22 @@ h1 {
 
   .hero__image {
     max-width: 230px;
+  }
+
+  .our-clients {
+    padding: 30px 0 24px 0;
+  }
+
+  .our-clients__subtitle {
+    margin: 8px 0 30px 0;
+  }
+
+  .our-clients__items {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 25px calc((100% - 144px) / 3);
   }
 }
