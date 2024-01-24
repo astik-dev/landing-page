@@ -1,7 +1,8 @@
 @use "base/reset";
 @use "base/typography";
 
-@use "components/header";
 @use "components/btn";
 @use "components/container";
-@use "components/hero";
+
+@use "layout/header";
+@use "layout/hero";
