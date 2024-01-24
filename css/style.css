@@ -106,6 +106,40 @@ h1 {
   color: #717171;
 }
 
+.btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 14px 32px;
+  background: #4CAF4F;
+  border-radius: 4px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 500;
+  color: #FFF;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.btn:active {
+  background: #388E3B;
+}
+
+.container {
+  max-width: 1232px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin: 0 auto;
+}
+
 .header {
   position: relative;
   height: 84px;
@@ -225,40 +259,6 @@ h1 {
   display: none;
 }
 
-.btn {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 14px 32px;
-  background: #4CAF4F;
-  border-radius: 4px;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  font-size: 16px;
-  line-height: 150%;
-  font-weight: 500;
-  color: #FFF;
-  white-space: nowrap;
-  text-align: center;
-}
-
-.btn:active {
-  background: #388E3B;
-}
-
-.container {
-  max-width: 1232px;
-  padding-left: 40px;
-  padding-right: 40px;
-  margin: 0 auto;
-}
-
 .hero {
   background: #F5F7FA;
   padding: 96px 0;
@@ -321,6 +321,11 @@ h1 {
     font-size: 45px;
   }
 
+  .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
   .header {
     height: 70px;
     padding: 0 20px;
@@ -338,11 +343,6 @@ h1 {
     padding: 8px 18px;
   }
 
-  .container {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-
   .hero {
     padding: 64px 0;
   }
@@ -351,6 +351,15 @@ h1 {
 @media (max-width: 767.5px) {
   h1 {
     font-size: 38px;
+  }
+
+  .btn {
+    padding: 12px 26px;
+  }
+
+  .container {
+    padding-left: 25px;
+    padding-right: 25px;
   }
 
   .header {
@@ -465,15 +474,6 @@ h1 {
     display: inline-flex;
   }
 
-  .btn {
-    padding: 12px 26px;
-  }
-
-  .container {
-    padding-left: 25px;
-    padding-right: 25px;
-  }
-
   .hero {
     padding: 48px 0;
   }
@@ -482,6 +482,11 @@ h1 {
 @media (max-width: 575.5px) {
   h1 {
     font-size: 32px;
+  }
+
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   .header {
@@ -500,11 +505,6 @@ h1 {
   .header__burger {
     top: 7.5px;
     right: 10px;
-  }
-
-  .container {
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .hero {
