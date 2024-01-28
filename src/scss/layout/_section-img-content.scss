@@ -1,0 +1,91 @@
+@use "abstracts/breakpoints" as *;
+@use "abstracts/mixins" as *;
+
+
+
+.section-img-content {
+
+    &__container {
+        @include flex (flex, space-between, center, 40px);
+
+        @media (max-width: $lg) {
+            gap: 30px;
+        }
+        @media (max-width: $md) {
+            gap: 0;
+            align-items: flex-start;
+        }
+        @media (max-width: $sm) {
+            gap: 15px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+    }
+
+    &__img {
+        position: relative;
+
+        width: 38.37%;
+        padding-bottom: 37.6%;
+        
+        @media (max-width: $sm) {
+            width: 100%;
+            max-width: 320px;
+            padding-bottom: 0;
+        }
+
+
+        img {
+            position: absolute;
+            top: 50%;
+            left: 0;
+
+            width: 100%;
+
+            object-fit: contain;
+
+            transform: translateY(-50%);
+
+            @media (max-width: $sm) {
+                position: static;
+
+                transform: none;
+            }
+        }
+    }
+
+    &__content {   
+        width: calc(100% - 38.37% - 40px - 9px); // 100% - img_width - gap - 9px
+        padding-right: 60px;
+
+        @media (max-width: $xl) {
+            width: calc(100% - 38.37% - 40px); // 100% - img_width - gap
+            padding-right: 50px;
+        }
+        @media (max-width: $lg) {
+            width: calc(100% - 38.37% - 30px); // 100% - img_width - gap
+            padding-right: 20px;
+        }
+        @media (max-width: $md) {
+            width: calc(100% - 38.37%); // 100% - img_width
+            padding-right: 0;
+        }
+        @media (max-width: $sm) {
+            width: 100%;
+            padding: 0 15px;
+        }
+
+
+        p {
+            margin: 16px 0 32px 0;
+
+            @media (max-width: $lg) {
+                margin: 12px 0 24px 0;
+            }
+            @media (max-width: $md) {
+                margin: 8px 0 16px 0;
+            }
+        }
+    }
+}
