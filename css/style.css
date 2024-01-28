@@ -89,6 +89,7 @@ h6 {
 body {
   font-family: "Inter", sans-serif;
   color: #717171;
+  line-height: 20px;
 }
 
 h1 {
@@ -424,6 +425,46 @@ h3 {
   margin: 16px 0 8px 0;
 }
 
+.section-img-content__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 40px;
+}
+
+.section-img-content__img {
+  position: relative;
+  width: 38.37%;
+  padding-bottom: 37.6%;
+}
+
+.section-img-content__img img {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.section-img-content__content {
+  width: calc(61.63% - 40px - 9px);
+  padding-right: 60px;
+}
+
+.section-img-content__content p {
+  margin: 16px 0 32px 0;
+}
+
 @media (max-width: 1199.5px) {
   h1 {
     font-size: 56px;
@@ -440,6 +481,11 @@ h3 {
   .our-clients__items {
     -ms-flex-pack: distribute;
         justify-content: space-around;
+  }
+
+  .section-img-content__content {
+    width: calc(61.63% - 40px);
+    padding-right: 50px;
   }
 }
 
@@ -500,6 +546,19 @@ h3 {
 
   .suitable-for__items {
     gap: 30px;
+  }
+
+  .section-img-content__container {
+    gap: 30px;
+  }
+
+  .section-img-content__content {
+    width: calc(61.63% - 30px);
+    padding-right: 20px;
+  }
+
+  .section-img-content__content p {
+    margin: 12px 0 24px 0;
   }
 }
 
@@ -642,6 +701,22 @@ h3 {
   .suitable-for__item {
     min-width: 250px;
   }
+
+  .section-img-content__container {
+    gap: 0;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+
+  .section-img-content__content {
+    width: 61.63%;
+    padding-right: 0;
+  }
+
+  .section-img-content__content p {
+    margin: 8px 0 16px 0;
+  }
 }
 
 @media (max-width: 575.5px) {
@@ -734,6 +809,38 @@ h3 {
 
   .suitable-for__item {
     min-width: 280px;
+  }
+
+  .section-img-content__container {
+    gap: 15px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+
+  .section-img-content__img {
+    width: 100%;
+    max-width: 320px;
+    padding-bottom: 0;
+  }
+
+  .section-img-content__img img {
+    position: static;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+  }
+
+  .section-img-content__content {
+    width: 100%;
+    padding: 0 15px;
   }
 }
 
