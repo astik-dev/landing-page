@@ -1,0 +1,125 @@
+@use "abstracts/colors";
+@use "abstracts/transitions";
+@use "abstracts/breakpoints" as *;
+@use "abstracts/mixins" as *;
+
+
+
+.suitable-for {
+
+    padding: 30px 0 42px 0;
+
+    @media (max-width: $lg) {
+        padding: 25px 0 36px 0;
+    }
+    @media (max-width: $sm) {
+        padding: 20px 0 30px 0;
+    }
+
+    &__title,
+    &__subtitle {
+        text-align: center;
+    }
+
+    &__title {
+        max-width: 550px;
+
+        margin: 0 auto;
+
+        @media (max-width: $lg) {
+            max-width: 500px;
+        }
+        @media (max-width: $sm) {
+            max-width: 420px;
+        }
+    }
+
+    &__subtitle {
+        margin: 6px 0 16px 0;
+    }
+
+    &__items {
+        @include flex (flex, space-between, center, 40px, wrap);
+
+        @media (max-width: $lg) {
+            gap: 30px;
+        }
+        @media (max-width: $md) {
+            gap: 25px;
+            justify-content: space-around;
+        }
+        @media (max-width: $sm) {
+            gap: 20px;
+        }
+    }
+
+    &__item {
+        flex: 1;
+
+        max-width: 299px;
+        min-width: 0;
+
+        padding: 24px 32px;
+
+        border-radius: 8px;
+        box-shadow: 0px 2px 4px 0px rgba(171, 190, 209, 0.20);
+
+        transition: transitions.$suitable-for-item;
+
+        text-align: center;
+
+        @media (max-width: $md) {
+            min-width: 250px;
+        }
+        @media (max-width: $sm) {
+            min-width: 280px;
+        }
+
+        @media (hover: hover) {
+            &:hover {
+                transform: scale(1.03);
+            }
+        }
+
+        
+        &-img {
+            position: relative;
+
+            display: inline-block;
+
+            width: 65px;
+            height: 56px;
+
+            text-align: left;
+
+            img {
+                position: relative;
+                z-index: 2;
+
+                width: 48px;
+                height: 48px;
+            }
+
+            &:after {
+                content: "";
+
+                position: absolute;
+                z-index: 1;
+                bottom: 0;
+                right: 0;
+                
+                display: inline-block;
+
+                width: 50px;
+                height: 49px;
+
+                border-radius: 18px 5px 10px 5px;
+                background: colors.$tint-1;
+            }
+        }
+
+        &-title {
+            margin: 16px 0 8px 0;
+        }
+    }
+}

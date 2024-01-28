@@ -5,6 +5,7 @@
 
 body {
     font-family: 'Inter', sans-serif;
+    color: colors.$neutral-3;
 }
 
 
@@ -36,6 +37,19 @@ h2 {
         font-size: 27px;
     }
 }
+h3 {
+    color: colors.$neutral-1;
+    font-size: 28px;
+    line-height: 128.571%;
+    font-weight: 700;
+
+    @media (max-width: $lg) {
+        font-size: 24px;
+    }
+    @media (max-width: $sm) {
+        font-size: 20px;
+    }
+}
 
 
 .title {
@@ -45,5 +59,4 @@ h2 {
 .subtitle {
     font-size: 16px;
     line-height: 150%;
-    color: colors.$neutral-3;
 }
