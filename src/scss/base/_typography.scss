@@ -51,6 +51,17 @@ h3 {
         font-size: 20px;
     }
 }
+h4, .h4 {
+    font-size: 20px;
+    line-height: 140%;
+
+    @media (max-width: $lg) {
+        font-size: 19px;
+    }
+    @media (max-width: $sm) {
+        font-size: 18px;
+    }
+}
 
 
 .title {

@@ -1,0 +1,60 @@
+@use "abstracts/colors";
+@use "abstracts/breakpoints" as *;
+@use "abstracts/mixins" as *;
+
+
+
+.img-quote {
+    background: colors.$neutral-2;
+
+    &__container {
+        @include flex (flex, space-between, center, 40px);
+    
+        @media (max-width: $lg) {
+            gap: 30px;
+        }
+        @media (max-width: $md) {
+            gap: 25px;
+        }
+        @media (max-width: $sm) {
+            gap: 20px;
+            flex-direction: column;         
+        }
+    }
+
+    &__img {
+        flex-shrink: 0;
+
+        width: 28.29861%;
+
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0px 8px 16px 0px rgba(171, 190, 209, 0.40);
+
+        @media (max-width: $sm) {
+            width: 280px;
+        }
+    }
+
+    &__quote {
+        width: calc(100% - 28.29861%);
+        max-width: 748px;
+
+        @media (max-width: $sm) {
+            width: 100%;
+        }
+
+
+        &-text {
+            font-weight: 500;
+        }
+
+        &-name {
+            margin: 16px 0 8px 0;
+        }
+
+        &-company {
+            color: colors.$neutral-4;
+        }
+    }
+}
