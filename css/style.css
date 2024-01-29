@@ -109,6 +109,12 @@ h3 {
   font-weight: 700;
 }
 
+h4,
+.h4 {
+  font-size: 20px;
+  line-height: 140%;
+}
+
 .title {
   font-weight: 600;
   color: #4D4D4D;
@@ -129,6 +135,10 @@ h3 {
 
 .p-tb-64 {
   padding: 64px 0;
+}
+
+.p-tb-32 {
+  padding: 32px 0;
 }
 
 .btn {
@@ -532,6 +542,51 @@ h3 {
      object-fit: contain;
 }
 
+.img-quote {
+  background: #F5F7FA;
+}
+
+.img-quote__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 40px;
+}
+
+.img-quote__img {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 28.29861%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(171, 190, 209, 0.4);
+          box-shadow: 0px 8px 16px 0px rgba(171, 190, 209, 0.4);
+}
+
+.img-quote__quote {
+  width: 71.70139%;
+  max-width: 748px;
+}
+
+.img-quote__quote-text {
+  font-weight: 500;
+}
+
+.img-quote__quote-name {
+  margin: 16px 0 8px 0;
+}
+
+.img-quote__quote-company {
+  color: #89939E;
+}
+
 @media (max-width: 1199.5px) {
   h1 {
     font-size: 56px;
@@ -577,12 +632,21 @@ h3 {
     font-size: 24px;
   }
 
+  h4,
+  .h4 {
+    font-size: 19px;
+  }
+
   .m-tb-48 {
     margin: 40px 0;
   }
 
   .p-tb-64 {
     padding: 46px 0;
+  }
+
+  .p-tb-32 {
+    padding: 28px 0;
   }
 
   .container {
@@ -660,6 +724,10 @@ h3 {
   .achievements__items {
     gap: 35px 25px;
     max-width: 490px;
+  }
+
+  .img-quote__container {
+    gap: 30px;
   }
 }
 
@@ -854,6 +922,10 @@ h3 {
     width: 50%;
     min-width: 175px;
   }
+
+  .img-quote__container {
+    gap: 25px;
+  }
 }
 
 @media (max-width: 575.5px) {
@@ -869,12 +941,21 @@ h3 {
     font-size: 20px;
   }
 
+  h4,
+  .h4 {
+    font-size: 18px;
+  }
+
   .m-tb-48 {
     margin: 32px 0;
   }
 
   .p-tb-64 {
     padding: 30px 0;
+  }
+
+  .p-tb-32 {
+    padding: 24px 0;
   }
 
   .container {
@@ -990,6 +1071,22 @@ h3 {
 
   .achievements__item {
     gap: 8px;
+  }
+
+  .img-quote__container {
+    gap: 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .img-quote__img {
+    width: 280px;
+  }
+
+  .img-quote__quote {
+    width: 100%;
   }
 }
 
