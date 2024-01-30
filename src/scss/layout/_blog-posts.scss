@@ -1,0 +1,41 @@
+@use "abstracts/breakpoints" as *;
+@use "abstracts/mixins" as *;
+
+
+
+.blog-posts {
+    margin-bottom: 95px;
+
+    @media (max-width: $xl) {
+        margin-bottom: 80px;
+    }
+    @media (max-width: $lg) {
+        margin-bottom: 64px;
+    }
+    @media (max-width: $md) {
+        margin-bottom: 48px;
+    }
+    
+
+    &__title,
+    &__subtitle {
+        text-align: center;
+    }
+
+    &__subtitle {
+        max-width: 630px;
+        
+        margin: 8px auto 16px auto;
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 24px;
+
+        @media (max-width: $sm) {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+    }
+}

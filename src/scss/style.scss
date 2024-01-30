@@ -4,6 +4,7 @@
 
 @use "components/btn";
 @use "components/container";
+@use "components/post-item";
 
 @use "layout/header";
 @use "layout/hero";
@@ -12,3 +13,4 @@
 @use "layout/section-img-content";
 @use "layout/achievements";
 @use "layout/img-quote";
+@use "layout/blog-posts";

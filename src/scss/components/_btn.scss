@@ -5,22 +5,27 @@
 
 
 
-.btn {
+.btn,
+.btn-arrow-tertiary {
     @include flex (inline-flex, center, center);
 
+    border-radius: 4px;
+
+    transition: transitions.$btn;
+
+    white-space: nowrap;
+    text-align: center;
+}
+
+.btn {
     padding: 14px 32px;
 
     background: colors.$brand-primary;
-    border-radius: 4px;
-    
-    transition: transitions.$btn;
 
     font-size: 16px;
     line-height: 150%;
     font-weight: 500;
     color: colors.$default-white;
-    white-space: nowrap;
-    text-align: center;
 
     &:active {
         background: colors.$shade-1;
@@ -28,5 +33,57 @@
 
     @media (max-width: $md) {
         padding: 12px 26px;
+    }
+}
+
+.btn-arrow-tertiary {
+    padding: 8px;
+
+    background: transparent;
+
+    color: colors.$brand-primary;
+    font-size: 20px;
+    line-height: 140%;
+    font-weight: 600;
+
+    @media (max-width: $lg) {
+        font-size: 19px;
+    }
+    @media (max-width: $sm) {
+        font-size: 18px;
+    }
+    
+
+    &:after {
+        content: "";
+
+        display: inline-block;
+
+        margin-left: 8px;
+        
+        width: 24px;
+        height: 24px;
+
+        background: colors.$brand-primary;
+        mask-image: url("../img/btn-arrow.svg");
+
+        transition: inherit;
+    }
+
+
+    &:hover {
+        background: colors.$tint-1;
+        
+        &:after {
+            transform: translateX(2px);
+        }
+    }
+
+    &:active {
+        background: colors.$tint-2;
+
+        &:after {
+            transform: translateX(4px);
+        }
     }
 }
