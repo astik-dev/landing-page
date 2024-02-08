@@ -167,8 +167,8 @@ h4,
   margin-left: 8px;
   width: 24px;
   height: 24px;
-  -webkit-mask-image: url("../img/btn-arrow.svg");
-          mask-image: url("../img/btn-arrow.svg");
+  -webkit-mask-image: url("../img/svgsprite/icons.svg#btn-arrow");
+          mask-image: url("../img/svgsprite/icons.svg#btn-arrow");
   -webkit-transition: inherit;
   transition: inherit;
 }
