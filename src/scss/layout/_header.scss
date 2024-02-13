@@ -55,11 +55,16 @@
     &__logo {
 
         @media (max-width: $md) {
+            position: relative;
+            z-index: 2;
+
             @include flex (flex, null, center);
 
             height: 60px;
 
             padding-left: 20px;
+
+            background: colors.$default-white;
         }
         @media (max-width: $sm) {
             height: 50px;
@@ -79,11 +84,15 @@
     &__nav {
 
         @media (max-width: $md) {
-            display: none;
+            position: relative;
+            z-index: 1;
 
             padding: 20px;
 
             background: colors.$default-white;
+            transform: translateY(-300px);
+
+            transition: transitions.$header-mobile;
         }
         @media (max-width: $sm) {
             padding: 20px 15px;
@@ -139,13 +148,17 @@
         @include flex (inline-flex, null, null, 14px);
 
         @media (max-width: $md) {
-            display: none;
+            position: relative;
+            z-index: 1;
 
             justify-content: center;
 
             padding: 0 0 20px 0;
 
             background: colors.$default-white;
+            transform: translateY(-300px);
+
+            transition: transitions.$header-mobile;
         }
 
 
@@ -210,6 +223,7 @@
 
         @media (max-width: $md) {
             position: absolute;
+            z-index: 3;
             top: calc((60px - 35px) / 2);
             right: 15px;
 
@@ -228,6 +242,8 @@
 
                 border-radius: 5px;
                 background: colors.$brand-primary;
+
+                transition: transitions.$header-burger;
             }
         }
         @media (max-width: $sm) {
@@ -241,11 +257,25 @@
     &_burger-open {
 
         @media (max-width: $md) {
-            .header__nav {
-                display: block;
-            }
+            .header__nav,
             .header__auth {
-                display: inline-flex;
+                transform: translateY(0);
+            }
+            .header__burger {
+
+                span {
+
+                    &:nth-child(1) {
+                        transform: translateY(10.5px) rotate(45deg);
+                    }
+                    &:nth-child(3) {
+                        transform: translateY(-10.5px) rotate(-45deg);
+                    }
+                    &:nth-child(2) {
+                        opacity: 0;
+                        transform: scale(0);
+                    }
+                }
             }
         }
     }
